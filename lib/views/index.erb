@@ -1,0 +1,31 @@
+<html>
+
+<head>
+	<title>The Gossip Project</title>
+</head>
+
+	<body>
+		 <h1> 🄼🄾🄽 🅂🅄🄿🄴🅁 🅂🄸🅃🄴 🄳🄴 🄶🄾🅂🅂🄸🄿, 🄳🄴🄿🅄🄸🅂 🄻🄴 🄳🄾🅂🅂🄸🄴🅁 🅅🄸🄴🅆🅂 ! 🅈🄰🅈! !</h1>
+
+		 <a href="/gossips/new/"><br><strong>Bonjour et bienvenue cher utilisateur </strong></a></br>
+
+
+		 <br><a>******************************************</a></br>
+		 <p>Voici les potins du jour 😁: </p>
+
+		<% gossips.each_with_index do |gossip, i| %>
+	        <p>
+	         <br><a href="/gossips/<%= i %>/">lien</a></br>
+	         <p>Voici les potins <%= i %>: </p>
+	          <%= gossip.author %><br/>
+	          <%= gossip.content %>
+	        </p>
+      	<% end %>
+
+      	<a>******************************************</a>
+
+	</body>
+</html>
+
+
+ <!-- <a href="/gossips/new/:id"><br> Potin n°{:id} </a></br> -->
